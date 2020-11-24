@@ -1,299 +1,577 @@
 <!doctype html>
 <html>
-    <head>
-        <title>Volkan Özçelik</title>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8">
-        <meta name="description" content="About Volkan Özçelik; who I am and the cool stuff I do.">
-        <meta name="keywords" content="Volkan, Volkan Özçelik, developer, public speaker, front end, back end, devops, full stack, performance nerd, scalability freak, JavaScript">
 
-		<link href="//cloud.webtype.com/css/1fa83ac3-90eb-426f-8d4c-496c082fce54.css" rel="stylesheet" type="text/css">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <title>Volkan Özçelik</title>
+  <meta http-equiv="Content-Security-Policy" content="
+default-src 'self';
+img-src * data:;
+script-src 'self' 'unsafe-inline' www.google-analytics.com;
+style-src 'unsafe-inline' volkan.io www.volkan.io cloud.webtype.com;
+font-src 'self' cloud.webtype.com;
+">
+  <meta name="description" content="About Volkan Özçelik; who I am and the cool stuff I do.">
+  <meta name="keywords" content="Volkan, Volkan Özçelik, developer, public speaker, front end, back end,
+devops, full stack, performance nerd, scalability freak, JavaScript">
 
-		<style>
-            body {
-                font-family: "Apres RE", Georgia, serif;
-                line-height: 1.85em;
-                color: #000;
-                background: #fefefe url(/bg);
-            }
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/images/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
 
-            h1, h2 {
-                font-family:"MVB Calliope", Georgia, serif;
-                font-size: 3.25em;
-                line-height: 1.2em;
-                letter-spacing:-0.025em;
-                font-weight:normal;
-                margin: 1em 0.3em 0.1em 0.3em;
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+      'Helvetica Neue', Arial, sans-serif;
+      line-height: 1.85em;
+      color: #000;
+      background: #f0f0f0;
+      font-weight: 200;
+      font-size: 18px;
+    }
 
-            }
+    b,
+    strong {
+      font-weight: 500;
+    }
 
-            p {
-                font-size: 1.2em;
-                line-height: 1.75em;
-                margin: 0 1em 1.5em 2em;
-            }
+    h1,
+    h2 {
+      font-size: 2.25em;
+      line-height: 1.2em;
+      margin: 1em 0.3em 0.1em 0.8em;
+      font-weight: 100;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
 
-            a {color: #003DF5;}
-            a:hover {text-decoration: none;}
-            a strong {color: #003DF5;}
-            a:hover, a:hover strong {color: #003DF5 !important;}
+    h1 {
+      text-align: center;
+      margin-top: -130px;
+      letter-spacing: 1px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      font-weight: 100;
+      font-size: 48px;
+      width: 100%;
+      margin-left: 0;
+      color: rgba(0, 0, 0, .85);
+      text-shadow: 2px 4px 6px rgba(0, 0, 0, 0.42);
+    }
 
-            blockquote {
-                font-style:italic;
-                border-left:2px #FFCC33 solid;
-                line-height:1.55em;padding-left:1em;
-                font-size: 1em;
-            }
+    h2 {
+      color: #D6A000;
+      opacity: 0.35;
+      transition: all 0.75s ease-in-out;
+      font-weight: 200;
+      font-style: italic;
+      margin-bottom: 0.32em;
+    }
 
-            ul, dl {
-                margin: 0 0 2.5em 2em;
-            }
+    article:hover h2 {
+      opacity: 1;
+    }
 
-            li, dt, dd {
-                display: block;
-                font-size: 1.2em;
-                line-height: 1.25em;
-                margin: 0 0 1em 0;
-            }
+    h1 strong {
+      font-weight: 200;
+      color: #434445;
+      transition: all 0.75s ease-in-out;
+    }
 
-            li a, dt a {
-                display: block;
-            }
+    h3 {
+      font-size: 2.25em;
+      line-height: 1.2em;
+      letter-spacing: -0.025em;
+      font-weight: 100;
+      margin: 1em 0.3em 0.1em 0.8em;
+      text-align: center;
+    }
 
-            dt {margin: 1em 0 0 0;}
-            dd {
-                margin:0.5em 0 0 2em;
-                font-style: italic;
-                font-size:1em;
-                line-height:1.8em;
+    .slogan {
+      text-align: center;
+      padding-left: 1em;
+      font-style: normal;
+      -webkit-font-smoothing: subpixel-antialiased;
+      -moz-osx-font-smoothing: auto;
+      font-size: 20px;
+      position: relative;
+      top: -5px;
+      left: -7px;
+      opacity: 0.85;
+      color: #000000;
+    }
 
-            }
+    p {
+      font-size: 1em;
+      line-height: 1.55em;
+      margin: 0.4em 1em 0.8em 2em;
+    }
 
-            aside {
-                width: 19.5em;
-                height: 19.5em;
-                margin: 0 auto;
-                border-radius: 50%;
-                overflow: hidden;
-                display:block;
-            }
-            aside img {display: block;width: 100%;}
+    a {
+      color: #000000;
+      transition: all 0.25s ease-in-out;
+      padding: 6px 4px 2px 4px;
+      text-decoration: none;
+      border-bottom: 2px #FFCC33 solid;
+    }
 
-            header p  {
-                margin: 0.1em 0 2em 0;
-                font-size: 1.2em;
-            }
+    a:hover {
+      text-decoration: none;
+    }
 
-            .flex-container {
-                display: -webkit-flex;
-                display: flex;
+    a strong {
+      color: #000000;
+      transition: all 0.25s ease-in-out;
+    }
 
-                -webkit-flex-direction: row;
-                flex-direction: row;
+    a:hover,
+    a:hover strong {
+      background: #FFCC33;
+      color: #000000 !important;
+    }
 
-                -webkit-flex-wrap: wrap;
-                flex-wrap: wrap;
+    a:hover {
+      border-bottom: 2px #FFCC33 solid;
+    }
 
-                -webkit-justify-content: center;
-                justify-content: center;
+    blockquote {
+      font-style: italic;
+      border-left: 6px #FFCC33 solid;
+      line-height: 1.55em;
+      font-size: 1em;
+    }
 
-                -webkit-align-content: flex-start;
-                align-content: flex-start;
+    ul,
+    dl {
+      margin: 0 0 2.5em 2em;
+    }
 
-                -webkit-align-items: stretch;
-                align-items: stretch;
-            }
+    li,
+    dt,
+    dd {
+      display: block;
+      font-size: 1em;
+      line-height: 1.25em;
+      margin: 0 0 1em 0;
+    }
 
-            .flex-item-main {
-                margin-top: 2em;
-                margin-bottom: 6em;
+    li a,
+    dt a {
+      display: block;
+    }
 
-                -webkit-flex-grow: 1;
-                flex-grow: 1;
+    dt {
+      margin: 1em 0 0 0;
+    }
 
-                -webkit-flex-shrink: 0;
-                flex-shrink: 0;
+    dd {
+      margin: 0.5em 0 0 1.2em;
+      font-style: italic;
+      font-size: 1em;
+      line-height: 1.8em;
+    }
 
-                -webkit-flex-basis: 750px;
-                flex-basis: 750px;
+    aside {
+      width: 19.5em;
+      height: 19.5em;
+      margin: 0 auto;
+      border-radius: 50%;
+      overflow: hidden;
+      display: block;
+      -webkit-box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.58);
+      -moz-box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.58);
+      box-shadow: 1px 1px 10px 0 rgba(0, 0, 0, 0.58);
+      border: 1px #999999 solid;
+    }
 
-                max-width: 750px;
+    aside {
+      margin: -1em auto -2em;
+    }
 
-                background:#fff;
-                opacity:0.65;
+    aside img {
+      display: block;
+      width: 100%;
+    }
 
-                -webkit-transform: matrix(1, -0.015, 0, 1, 0, 0) translate3d(0,0,1px);
-                -o-transform: matrix(1, -0.085, 0, 1, 0, 0) translate3d(0,0,1px);
-                -moz-transform: matrix(1, -0.015, 0, 1, 0, 0) translate3d(0,0,1px);
-                -ms-transform: matrix(1, -0.015, 0, 1, 0, 0) translate3d(0,0,1px);
-                transform: matrix(1, -0.015, 0, 1, 0, 0) translate3d(0,0,1px);
-            }
+    header p {
+      margin: 0.1em 0 2em 0;
+      font-size: 1.2em;
+    }
 
-            .flex-item-aside {
-                margin-top: 2em;
+    .flex-container {
+      display: -webkit-flex;
+      display: flex;
 
-                -webkit-flex-grow: 1;
-                flex-grow: 1;
+      -webkit-flex-direction: row;
+      flex-direction: row;
 
-                -webkit-flex-shrink: 0;
-                flex-shrink: 0;
+      -webkit-flex-wrap: wrap;
+      flex-wrap: wrap;
 
-                -webkit-flex-basis: 350px;
-                flex-basis: 350px;
+      -webkit-justify-content: center;
+      justify-content: center;
 
-                max-width:400px;
-            }
+      -webkit-align-content: flex-start;
+      align-content: flex-start;
 
-            @media (max-width: 800px) {
-                body {margin:0;}
+      -webkit-align-items: stretch;
+      align-items: stretch;
+    }
 
-                .flex-container {
-                    -webkit-align-contents: column;
-                    align-contents: column;
-                }
-                .flex-item-main {
-                    -webkit-flex-basis: 98%;
-                    flex-basis: 98%;
+    .flex-item-main {
+      margin-top: 2em;
+      margin-bottom: 6em;
 
-                    margin-left:0;
-                    margin-right:0;
+      -webkit-flex-grow: 1;
+      flex-grow: 1;
 
-                }
-                .flex-item-aside {
-                    -webkit-flex-basis: 98%;
-                    flex-basis: 98%;
-                }
-            }
-        </style>
-        <script>
-          (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-          (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-          })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      -webkit-flex-shrink: 0;
+      flex-shrink: 0;
 
-          ga('create', 'UA-56512-13', 'volkan.io');
-          ga('send', 'pageview');
-        </script>
+      -webkit-flex-basis: 750px;
+      flex-basis: 750px;
+
+      max-width: 750px;
+
+      background: #fff;
+    }
+
+    .flex-item-main {
+      -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.1) inset;
+      -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.1) inset;
+      box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3), 0 0 4px rgba(0, 0, 0, 0.1) inset;
+    }
+
+    @media (max-width: 800px) {
+      body {
+        margin: 0;
+      }
+
+      .flex-container {
+        -webkit-align-contents: column;
+        align-contents: column;
+      }
+
+      .flex-item-main {
+        -webkit-flex-basis: 98%;
+        flex-basis: 98%;
+
+        margin-left: 0;
+        margin-right: 0;
+      }
+    }
+
+    .quick-links {
+      display: flex;
+      margin: -10px auto;
+      align-items: center;
+      justify-content: space-around;
+      border-bottom: 1px #cccccc solid;
+      padding-left: 0;
+      background: #ffffff;
+      border-top: 1px #cccccc solid;
+      width: 102%;
+      left: -1%;
+      position: relative;
+      box-shadow: 0 0 4px 4px rgba(0, 0, 0, 0.08), 0 0 4px rgba(0, 0, 0, 0.1) inset;
+    }
+
+    .quick-links li {
+      padding: 12px;
+      text-align: center;
+      margin: 5px 10px;
+    }
+
+    .quick-links li a {
+      text-decoration: none;
+      font-style: normal;
+      color: #666666;
+      transition: all 0.25s ease-in-out;
+      line-height: 1.5em;
+      padding: 10px;
+      background: #fcefc9;
+      min-width: 180px;
+      border-radius: 4px 16px 4px 10px;
+      cursor: default;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-shadow: 2px 2px 14px rgba(255, 204, 51, 0.36),
+      -2px -2px 14px rgba(255, 204, 51, 0.36);
+      border-bottom: 1px #f9e29e solid;
+    }
+
+    .quick-links li a strong {
+      color: #666666 !important;
+      font-weight: 500;
+      transition: all 0.25s ease-in-out;
+    }
+
+    .quick-links li a:hover {
+      text-decoration: none;
+      color: #000000 !important;
+      background: #FFCC33;
+      opacity: 1;
+      border-radius: 16px 4px 10px 4px;
+      border-bottom: 1px #FFCC33 solid;
+      box-shadow: 0 8px 20px -8px rgba(0, 0, 0, 0.45);
+    }
+
+    .quick-links li a:hover strong {
+      color: #000000 !important;
+    }
+
+    section {
+      clear: both;
+    }
+
+    aside {
+      transform: scale(0.62) translateY(-120px);
+    }
+
+    blockquote p {
+      margin-left: 1em;
+    }
+
+    ul {
+      margin-bottom: 0;
+    }
+
+    #z2hjs {
+      transition: all 0.75s ease-in-out;
+      border: 1px #f0f0f0 solid;
+    }
+
+        #z2hjs a {
+          transition: all 0.75s ease-in-out;
+        }
+
+    #z2hjs:hover a {
+      background: #FFCC33;
+    }
+
+    #z2hjs a em {
+      transition: all 0.75s ease-in-out;
+      color: #997200;
+    }
+
+    #z2hjs:hover a em {
+      color: #600164;
+    }
+
+    .over {
+      background: #ffffff;
+      border: 1px #cccccc solid !important;
+      border-radius: 4px 4px 4px 4px;
+      box-shadow: 0 8px 20px -8px rgba(0, 0, 0, 0.45);
+      cursor: pointer;
+    }
+  </style>
+  <script>
+    (function (i, s, o, g, r, a, m) {
+      i['GoogleAnalyticsObject'] = r; i[r] = i[r] || function () {
+        (i[r].q = i[r].q || []).push(arguments)
+      }, i[r].l = 1 * new Date(); a = s.createElement(o),
+        m = s.getElementsByTagName(o)[0]; a.async = 1; a.src = g; m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+    ga('create', 'UA-56512-13', 'volkan.io');
+    ga('send', 'pageview');
+  </script>
 </head>
-<body class="flex-container">
-    <div id="Meta" class="flex-item-aside">
-        <aside><img src="images/me.jpg" alt="Photo of Volkan Özçelik" title="Volkan Özçelik"></aside>
-    </div>
 
+<body>
+  <div class="to-zero-to-hero" id="z2hjs" style="width:750px;margin: 0 auto;margin-top:30px;margin-bottom:10px;">
+    <p style="line-height:2.4em;text-align:center;width: 750px;margin: 0 auto;margin-bottom:10px;margin-top:10px;">
+      <strong style="font-size:1.4em; font-weight: 100;">Who Else Wants to See me Breaking Production Online?</strong>
+      <br>
+      <a href="https://zerotoherojs.com/">Don’t miss out the
+        <strong>ZeroToHero</strong> Live <strong>Twitch</strong> Streams</a>.
+      <br> …👆 It’s so much fun. Come, join me.
+    </p>
+  </div>
+  <script>
+    (function() {
+      const div = document.getElementById('z2hjs');
+      div.addEventListener('mouseover', function(evt) {
+        div.classList.add('over');
+      });
+      div.addEventListener('moseout', function(evt) {
+        div.classList.remove('over');
+      });
+
+      div.addEventListener('click', function(evt) {
+        evt.preventDefault();
+        window.location.href = 'https://zerotoherojs.com/';
+      });
+    }());
+  </script>
+  <div class="flex-container">
     <article id="Main" class="flex-item-main">
-        <header>
-            <h1>Hi! I&#039;m Volkan Özçelik</h1>
-            <p style="text-align:right;padding-right:2em;"><em>Jack of all Trades, Samurai of <strong>JavaScript</strong></em></p>
-        </header>
+      <header>
+        <aside>
+          <img src="images/me.jpg" alt="Photo of Volkan Özçelik" title="Volkan Özçelik">
+        </aside>
+        <h1>Volkan Özçelik</h1>
+        <p class="slogan">developer, connector, streamer, speaker, writer</p>
+      </header>
 
-        <section>
-        	<h2>About Me</h2>
+      <section>
+        <ul class="quick-links">
+          <li>
+            <a href="https://twitch.tv/ZeroToHeroDev">
+              <strong>Follow Me</strong><br>
+              <em>twitch</em></a>
+          </li>
 
-            <p>I&#039;ve been creating mobile and web front-ends, <strong>since 2003</strong>;<br>
-            and this is the place where I brag about all the cool stuff I do.</p>
-
-            <p>I believe in the <strong>beauty</strong> of <strong>simplicity</strong>; and I
-            love to architect <strong>responsive</strong> and <strong>intuitive</strong> user interfaces,
-            driven by amazingly well-organized <strong>JavaScript</strong> code.</p>
-
-            <p>Currently, I&#039;m a <strong>Technical Lead</strong> at <a href="http://cisco.com/">Cisco</a>;<br>
-            I live in the lovely <strong>Mountain View, CA</strong>; I work at <strong>San Francisco</strong>.</p>
-        </section>
-
-        <section>
-            <h2>I Talk</h2>
-
-            <p>I love to talk about&hellip;</p>
-
-            <ul>
-            <li><strong>Performance</strong> Engineering;</li>
-            <li>Widgets, APIs, <strong>Microservices</strong>;</li>
-            <li>And <strong>JavaScript</strong>!</li>
-            </ul>
-
-            <p>If you are interested <a href="mailto:volkan@o2js.com">just shoot me an email</a>.<br>
-            I am highly motivated:<br>
-            I can talk for three slices of pizza, and some beer <strong>;)</strong>.</p>
-
-        </section>
-
-        <section>
-            <h2>My Talks</h2>
-
-            <p>Here are some of the talks I&#039;ve given so far:</p>
-
-            <dl>
-            <dt><a href="https://speakerdeck.com/volkan/the-secrets-of-high-performance-mobile-javascript-applications">The Secrets of <strong>High Performance</strong><br>
-             Mobile <strong>JavaScript</strong> Applications &raquo;&raquo;</a></dt>
-            <dd>Learn the rules like a pro, so that you can break them like an artist <strong>;)</strong><br>
-            My talk on <strong>mobile performance</strong> at <a href="http://html5devconf.com"><strong>#html5devconf</strong> 2014</a>.<br>
-            You may want to
-            <a href="https://thenewcircle.com/s/post/1658/the_secrets_of_high_performance_mobile_javascript_applications">watch a more recent talk of mine</a> on the same topic<br>
-            /~from <em><a href="http://forwardjs.com"><strong>#forwardjs</strong>  2014</a></em>/;<br>
-            You can also <a href="https://github.com/v0lkan/talks/tree/master/html5devconf">download the accompanying <strong>source code</strong></a>.</dd>
-
-            <dt><a href="https://speakerdeck.com/volkan/the-modern-hackers-guide-to-the-universe">The Modern Hacker&#39;s Guide to The Universe &raquo;&raquo;</a></dt>
-            <dd>Talked about a practical approach to surviving a <strong>hackathon</strong> at <a href="http://hack4good.io"><strong>#hack4good</strong> 0.5</a>.</dd>
-            <dt><a href="https://speakerdeck.com/volkan/mobile-application-performance-tips">Mobile Application Performance Tips &raquo;&raquo;</a></dt>
-            <dd>A talk that I gave at <a href="http://hack4good.io/">#hack4good 0.2</a>.</dd>
-
-            <dt><a href="https://speakerdeck.com/volkan/efficient-javascript">Efficient JavaScript @udemy &raquo;&raquo;</a></dt>
-            <dd>A 3-hour <strong>workshop</strong> that I&#039;ve given to
-            <strong><a href="http://udemy.com>">udemy</a></strong> engineers;<br>
-            <a href="https://github.com/v0lkan/talks/tree/master/udemy">download the accompanying <strong>source code</strong> from <strong>GitHub</strong></a>.</dd>
+          <li>
+            <a href="https://linkedin.com/in/volkanozcelik">
+              <strong>Get In Touch</strong><br>
+              <em>LinkedIn</em></a>
+          </li>
 
 
-            <dt><a href="http://o2js.com/J1V3R0Ckz/efficient-javascript/index.html">Efficient JavaScript @jive &raquo;&raquo;</a></dt>
-            <dd>A condensed version of the above, presented at
-            <strong><a href="http://jivesoftware.com/">Jive Software</a></strong> HQ.</dd>
+          <li>
+            <a href="https://github.com/zerotohero-dev">
+              <strong>Use the Source</strong><br>
+              <em>GitHub</em></a>
+          </li>
+        </ul>
+      </section>
 
-            <dt><a href="https://speakerdeck.com/volkan/javascript-widget-development-best-practices"
-                >JavaScript Widget Development Best Practices &raquo;&raquo;</a></dt>
-            <dd>A conference about widget development that I&#039;ve given at
-                <strong><a href="http://jstanbul.org/2012/">JStanbul 2012</a></strong>.</dd>
+      <section>
+        <h2>About Me</h2>
 
-            </dl>
-        </section>
+        <p>Currently, I’m a
+          <strong>Technical Lead</strong> at
+          <a href="http://cisco.com/">
+            <strong>Cisco</strong>
+          </a>, improving
+          <strong>performance</strong> across the fabric.</p>
 
-        <section>
-            <h2>I Write</h2>
+        <p>As an engineer, I solve
+          <strong>problems</strong>: The context, the origin, or the nature of the problems
+          are
+          <strong>orthogonal</strong> to the approaches I take in solving them.</p>
 
-            <p>I have a book about <strong><a href="http://o2js.com/interview-questions">JavaScript Interview Questions</a></strong>;
-            and here is its story:</p>
+        <h2>My Passion</h2>
 
-            <blockquote>In the last couple of years I have been to at least a hundred technical
-            interviews on <strong>JavaScript Engineering</strong>,
-            <strong>Front-End Development</strong>, and related positions.
-            So, rather than giving some HR Manager&#039;s perspective on what
-            interviews should look like, I wanted to hand over the reader the <strong>red pill</strong>
-            and tell what the <strong>JavaScript Engineering</strong> interviews <strong>really are</strong>.
-            </blockquote>
+        <p>I believe in the
+          <strong>beauty</strong> of
+          <strong>simplicity</strong>
+          (
+          <em>both in code and also in design</em>).</p>
 
-            <ul class="pushdown" >
-            <li><a href="http://o2js.com/interview-questions/">learn more about my journey &raquo;&raquo;</a></li>
-            </ul>
-            <p>I also have a mostly <strong>JavaScript</strong>-related technical blog <a href="http://o2js.com"><strong>o2js.com</strong></a> that I regularly update.</p>
+        <blockquote>
+          <p>My passion is to create
+            <strong>fast</strong>,
+            <strong>responsive</strong>,
+            <strong>intuitive</strong> interfaces, tools, and applications that millions
+            love and use.</p>
+        </blockquote>
 
-            <ul class="pushdown" >
-            <li><a href="http://o2js.com/">read my blog &raquo;&raquo;</a></li>
-            </ul>
+        <p>It’s the
+          <strong>curiosity</strong> that matters. Or asking the right questions, forming
+          <strong>ideas</strong>, refining those ideas based on
+          <strong>measurements</strong> and
+          <strong>evidence</strong>.</p>
 
-            <p>Oh, by the way, <a href="http://github.com/v0lkan/o2.js">o2.js</a> is a
-            <strong>JavaScript Framework</strong> that I have been<br>
-            maintaining as a side project,
-            along with <a href="http://github.com/v0lkan">many other side projects</a>.</p>
-        </section>
+        <blockquote>
+          <p>The solution is a
+            <strong>side effect</strong> of
+            <strong>curiosity</strong>.</p>
+        </blockquote>
+      </section>
 
-        <nav>
-            <h2>Other Places to Find Me</h2>
+      <section>
+        <h2>I Stream</h2>
 
-            <ul class="pushdown">
-            <li><a href="http://github.com/v0lkan/">See My Recent Work on <strong>github</strong> &raquo;&raquo;</a></li>
-            <li><a href="http://linkedin.com/in/volkanozcelik">Contact Me on <strong>LinkedIn</strong> &raquo;&raquo;</a></li>
-            <li><a href="http://geekli.st/volkan">Geek Me on <strong>geeklist</strong> &raquo;&raquo;</a></li>
-            </ul>
-        </nav>
+        <p>Nowadays, I’m
+          <a href="https://twitch.tv/ZeroToHeroDev"><strong>breaking production</strong>
+            on live streams for the entire world to see</a>.</p>
+
+        <p>Come, join me. It’s so much fun 😁.</p>
+      </section>
+
+      <section>
+        <h2>I Talk</h2>
+
+        <p>When I talk, I love to talk about…</p>
+
+        <ul>
+          <li>
+            <strong>Performance</strong> Engineering;</li>
+          <li>Widgets, APIs,
+            <strong>Microservices</strong>;</li>
+          <li>And
+            <strong>Serverless Architectures</strong>.</li>
+        </ul>
+
+        <blockquote>
+          <p>Public speaking is the most <strong>awesome</strong> and the most
+            <strong>terrifying</strong> experience that you’ll live simultaneously.
+            Everyone must do it at least once in their life.</p>
+        </blockquote>
+
+        <dl>
+          <dt>Here are some of the talks I’ve given so far:</dt>
+          <dd>
+            <a href="https://speakerdeck.com/volkan/scaling-your-node-dot-js-api-like-a-boss">
+              <strong>Scaling</strong> Your
+              <strong>Node.JS</strong> API Like a Boss</a>
+          </dd>
+          <dd>
+            <a href="https://speakerdeck.com/volkan/the-secrets-of-high-performance-mobile-javascript-applications">The Secrets of
+              <strong>High-Performance</strong> Mobile
+              Applications
+            </a>
+          </dd>
+          <dd>
+            <a href="https://speakerdeck.com/volkan/the-modern-hackers-guide-to-the-universe">The Modern <strong>Hacker</strong>’s Guide to The Universe</a>
+          </dd>
+        </dl>
+      </section>
+
+      <section>
+        <h2>I Hack</h2>
+
+        <p>I like tinkering with systems, and I’m not afraid to break stuff.</p>
+
+        <p><strong>Since 2003</strong>, I have been all over the stack, as far as stack goes.</p>
+
+        <blockquote>
+        <p>I find gaps in <strong>software architectures</strong>, business workflows,
+          and <strong>organizational structures</strong>—optimizing them to become
+          <a href="https://www.youtube.com/watch?v=gAjR4_CbPpQ">better, faster, stronger</a>.</p>
+        </blockquote>
+
+        <p>I’ve created <strong>mobile</strong> and <strong>web</strong> front-ends,
+        built desktop and mobile <strong>apps</strong>, played with <strong>SQL/NoSQL/GraphQL</strong>
+        data stores, and more.</p>
+
+        <p>I’ve automated the deployment of <strong>microservices</strong>, played with
+          <strong>serverless</strong> architectures, Kubernetes, and its friends,
+          such as <strong>istio</strong>.</p>
+
+        <p>I’ve  used <strong>real-time</strong> databases, streams,
+          <strong>WebSockets</strong>, protocol buffers, <strong>lambda functions</strong>,
+          and <strong>message queues</strong>.</p>
+
+        <p>I’ve crafted solutions to improve the
+          <strong>scalability</strong> and <strong>performance</strong> of
+          both front-end, and also back-end systems.</p>
+
+        <p>I’m pretty sure there’s much more to add to the list that I don’t
+        remember right now.</p>
+
+        <p style="border-top: 6px #FFCC33 solid;padding-top:1em;margin-top:2em;text-align:center">
+          That’s me in a nutshell: I’m a curious and pragmatist nerd
+          who likes to get 💩 done.</p>
+      </section>
+      <p>&nbsp;</p>
     </article>
     <footer>
     </footer>
+  </div>
 </body>
+
 </html>
